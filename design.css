@@ -1,0 +1,15 @@
+body{
+    background-color: blue;
+}
+p{
+    text-align: center;
+    font-family: sans-serif;
+    font: 100px;
+    color: red;
+}
+#imgButton{
+    text-align: center;
+}
+.imgButton{
+    text-align: center;
+}
