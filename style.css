@@ -1,0 +1,21 @@
+body{
+    background-color: blue;
+}
+*{
+    margin: o;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    padding: 40px;
+    text-align: center;
+}
+#user{
+    display:inline-block;
+    margin:auto;
+}
+yazan{
+    display: flex;
+    width: 100vw;
+    justify-content: space-around
+}
