@@ -14,3 +14,8 @@ header{
     display:inline-block;
     margin:auto;
 }
+yazan{
+    display: flex;
+    width: 100vw;
+    justify-content: space-around
+}
