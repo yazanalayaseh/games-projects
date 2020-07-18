@@ -1,33 +1,53 @@
 let userScore = 0;
 let computerScore = 0;
 
-let ComputerChoice = () => {
+let computerSelection = () => {
     let array = ['r', 'p', 's']
     Math.round(Math.random() * 2);
     return array[Math.round(Math.random() * 2)]
 }
+ 
 
-console.log(ComputerChoice())
+function win(){
+    console.log("You Win");
+    userScore+=100
+    document.getElementById("userScore").innerHTML=`Your Points: ${userScore} `
+    document.getElementById("message").innerHTML="You Won!"
+};
+
+
+function lose(){
+    computerScore+=100
+    console.log("You Lose");
+    document.getElementById("computerScore").innerHTML=`Enemy's Points: ${computerScore}`
+    document.getElementById("message").innerHTML="You lose"
+};
+
+
+function draw(){
+    console.log("Draw")
+    document.getElementById("Draw").innerHTML="Draw"
+};
+
+
+
+
 
 
 
 function game(UserChoice, ComputerChoice) {
-    console.log(ComputerChoice, UserChoice)
-}
-
-function game(u, c) {
     if (UserChoice + ComputerChoice === 'rp' || UserChoice + ComputerChoice === 'sr' || UserChoice + ComputerChoice === 'ps') {
         lose()
-    }
+    };
     if (UserChoice + ComputerChoice === 'pr' || UserChoice + ComputerChoice === 'rs' || UserChoice + ComputerChoice === 'sp') {
         win()
-    }
-}
-if (UserChoice + ComputerChoice === 'pp' || UserChoice + ComputerChoice === 'ss' || UserChoice + ComputerChoice === 'rr') {
+    };
+
+    if (UserChoice + ComputerChoice === 'pp' || UserChoice + ComputerChoice === 'ss' || UserChoice + ComputerChoice === 'rr') {
     draw()
+};
 }
-  }
-  }
+  
 
 
 function main() {
@@ -36,11 +56,11 @@ function main() {
     })
 
     document.getElementById("r").addEventListener("click", function () {
-        game("r");
+        game("r", computerSelection());
     })
 
     document.getElementById("p").addEventListener("click", function () {
-        game("p");
+        game("p", computerSelection());
     })
 }
 
